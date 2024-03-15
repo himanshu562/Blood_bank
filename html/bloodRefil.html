@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood Donation Consent Form</title>
+
+  <style>
+    .container {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Blood Donation Consent Form</h1>
+    <form id="myForm" method="POST" enctype="multipart/form-data">
+
+      <label for="blood-group">Blood Group:</label>
+      <select id="blood-group" name="blood_group" required>
+        <option value="">Select</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" name="amount" required>
+
+      <br>
+
+      <h4>Upload Consent Form:</h4>
+      <input type="file" name="pdfConsent" id="pdf-file-consent" accept="application/pdf" required>
+      <button id="upload-button-consent">Upload</button>
+      <div id="pdf-content-consent"></div>
+
+      <h4>Upload Report:</h4>
+      <input type="file" name="pdfReport" id="pdf-file-report" accept="application/pdf" required>
+      <button id="upload-button-report">Upload</button>
+      <div id="pdf-content-report"></div>
+
+      <input type="submit" id="submitButton" value="Submit" disabled>
+
+    </form>
+  </div>
+
+  <script src="bloodRefil.js"></script>
+</body>
+</html>
