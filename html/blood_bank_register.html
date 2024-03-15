@@ -1,61 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Blood Bank Registration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <style>
-        #main-form-heading{
-            color: rgb(255, 255, 255);
-            background-color: rgb(38, 166, 154);
-            text-align: center;
-            letter-spacing: 0.5px;
-            width:50% ;
-            margin : 0 auto;
-        }
-    </style>
-</head>
-<body>
-    <div id="main-form-heading" class="card-panel">
-        <h5>BloodBank</h5>
-       
-    </div>
-    <div class="container">
-        <div class="row">
-            <form action="register.php" method="post" class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="text" name="fname" id="fname" required>
-                        <label for="fname">First Name</label>
-                    </div>
-                    
-                  
-                    <div class="input-field col s6">
-                        <input type="text" name="lname" id="lname" required>
-                        <label for="lname">Last Name</label>
-                    </div>
-                    <br>
-                    <div class="input-field col s6">
-                        <input type="text" name="fname" id="fname" required>
-                        <label for="fname">username</label>
-                    </div>
-                    <br>
-                    <div class="input-field col s6">
-                        <input type="text" name="fname" id="fname" required>
-                        <label for="fname">email</label>
-                    </div>
-                    <br>
-                    <div class="input-field col s6">
-                        <input type="password" name="password" id="password" required>
-                        <label for="fname">Password</label></label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="password" name="password" id="password" required>
-                        <label for="fname">Confirm Password</label></label>
-                    </div>
-                    
-                </div>
-                <div class="row">
-                  <div class="col s12">
-  <button class="btn waves-effect waves-light" type="submit" name="action">Register</button>
-</div>
+  <html>
+  <head>
+      <title>Blood Bank Registration</title>
+     
+      <style>
+          #main-form-heading{
+              color: rgb(255, 255, 255);
+              background-color: rgb(38, 166, 154);
+              text-align: center;
+              letter-spacing: 0.5px;
+              width:70% ;
+              margin : 0 auto;
+          }
+      </style>
+  </head>
+  <body>
+      <div id="main-form-heading" class="card-panel">
+          <h5>BloodBank</h5>
+         
+      </div>
+      <div class="container">
+          <div class="row">
+              <form method="post" class="">
+                 <label for="text">Bank Name:</label>
+		            <input type="text" id="text"required ><br><br>
+		            <label for="text">Address:</label>
+		            <input type="text" id="text"required ><br><br>
+		            <label for="text">Contact:</label>
+		            <input type="text" id="text"required ><br><br>
+		            <label for="text">License Id:</label>
+		            <input type="text" id="text"required ><br><br>
+		            <label for="text">User Id:</label>
+		            <input type="text" id="text"required ><br><br>
+		            <label for="password">Password:</label>
+		            <input type="password" id="password"required ><br><br>
                    
+                      
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                         <button><a  class="btn waves-effect waves-light" type="submit" name="action" href="/html/blood_bank_login.html"> Register</a></button>  
+
+    <!-- <a href="/html/blood_bank_login.html">Register</a> -->
+  </div>
