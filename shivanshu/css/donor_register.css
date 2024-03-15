@@ -1,6 +1,7 @@
+/* style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +11,6 @@ body {
 }
 
 .container {
-    position: relative;
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -19,19 +19,11 @@ body {
     text-align: center;
 }
 
-.home-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 24px; /* Adjusted font size */
-    padding: 10px;
-}
-
 h1 {
-    color: #4CAF50; /* Accent color */
+    color: #ff3d00;
 }
 
-input[type="email"],
+input[type="text"],
 input[type="password"] {
     width: calc(100% - 20px);
     padding: 10px;
@@ -42,7 +34,7 @@ input[type="password"] {
 }
 
 button {
-    background-color: #4CAF50; /* Accent color */
+    background-color: #ff3d00;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -52,7 +44,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Darker shade */
+    background-color: #e64a19;
 }
 
 p {
@@ -60,7 +52,7 @@ p {
 }
 
 a {
-    color: #4CAF50; /* Accent color */
+    color: #ff3d00;
     text-decoration: none;
 }
 
