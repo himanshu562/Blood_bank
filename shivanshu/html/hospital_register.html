@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Registration</title>
+    <link rel="stylesheet" type="text/css" href="../css/hospital_register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-##########" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Registration</h1>
+        <form id="register-form" action="hospital_login.html" method="post">
+            <div class="input-field">
+                <label for="hospital_name">Hospital Name:</label>
+                <input type="text" id="hospital_name" name="hospital_name" required>
+            </div>
+            <div class="input-field">
+                <label for="user_id">User ID:</label>
+                <input type="text" id="user_id" name="user_id" required>
+            </div>
+            <div class="input-field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="hospital_login.html">Login here</a></p>
+        <a href="home.html" class="home-button"><i class="fas fa-home"></i> </a>
+    </div>
+</body>
+</html>
