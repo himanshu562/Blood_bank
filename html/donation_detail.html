@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donor Detail</title>
+</head>
+<body>
+	<h1>Donation Detail</h1>
+	
+		<label for="amount">Donation Date</label>
+<input type="text" id="amount" placeholder="dd/mm/yy" required><br><br>
+	<label for="amount">Donation Time:</label>
+<input type="text" id="amount" placeholder="00:00" required><br><br>
+	<label for="blood-group">Blood Group:</label> 
+<select id="blood-group" name="blood_group" required><br><br>
+
+<option value="">Select</option>
+<option value="A+">A+</option>
+<option value="A-">A-</option> 
+<option value="B+">B+</option>
+
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option> 
+<option value="O+">O+</option> 
+<option value="O-">O-</option> </select><br><br>
+  <label for="amount">Amount(in ml):</label>
+<input type="text" id="amount" name="amount" required><br><br>
+<label for="amount">Address:</label>
+<input type="text" id="amount" placeholder="village/city/state" required><br><br>
+	<label for="Rh-Factor">Donation Status:</label> 
+<select id="status" name="status" required><br>
+
+<option value="">Select</option>
+<option value="+ve">Successful</option>
+<option value="-ve">Rejected</option></select>
+
+</body>
+<h4>Upload Consent Form:</h4>
+	<input type="file" id="pdf-file" accept="application/pdf">
+	<button id="upload-button">Upload</button>
+	</body>
+	<div id="pdf-content"></div> <br>
+<input type="submit" value="Submit"> </form> </div>

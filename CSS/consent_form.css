@@ -1,0 +1,12 @@
+body{
+    padding: 25px;
+  }
+  .title {
+      color: #5C6AC4;
+  }
+  #pdf-content {
+      width: 100%;
+      height: 600px;
+      border: 1px solid black;
+      margin-top: 20px;
+  }
