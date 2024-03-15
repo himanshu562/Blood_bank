@@ -6,7 +6,12 @@
 <body>
 	<h1>Donation Detail</h1>
 	
-		<label for="amount">Donation Date</label>
+	
+		<label for="text">Full Name</label>
+<input type="text" id="amount" Placeholder="Name" required><br><br>
+	<label for="text">Contact:</label>
+<input type="text" id="amount" placeholder="PhoneNo" required><br><br>
+<label for="amount">Donation Date:</label>
 <input type="text" id="amount" placeholder="dd/mm/yy" required><br><br>
 	<label for="amount">Donation Time:</label>
 <input type="text" id="amount" placeholder="00:00" required><br><br>
@@ -30,14 +35,24 @@
 	<label for="Rh-Factor">Donation Status:</label> 
 <select id="status" name="status" required><br>
 
+
 <option value="">Select</option>
 <option value="+ve">Successful</option>
 <option value="-ve">Rejected</option></select>
 
-</body>
+</body><br><br>
+ <label for="amount">Donor Id:</label>
+<input type="text" id="amount" name="amount" required><br><br>
 <h4>Upload Consent Form:</h4>
 	<input type="file" id="pdf-file" accept="application/pdf">
 	<button id="upload-button">Upload</button>
-	</body>
+	
 	<div id="pdf-content"></div> <br>
-<input type="submit" value="Submit"> </form> </div>
+
+<h4>Upload Report:</h4>
+	<input type="file" id="pdf-file" accept="application/pdf">
+	<button id="upload-button">Upload</button>
+	
+	<div id="pdf-content"></div> <br>
+    <input type="submit" value="Submit">
+    </head>
