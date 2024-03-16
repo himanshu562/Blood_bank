@@ -1,13 +1,17 @@
 import {Router} from 'express';
 import { logoutUser,loginUser,registerUser, refreshAccessToken, changeCurrentPassword, 
     getCurrentUser, UpdateAccountDetails } from "../controllers/donorRegistration.controller.js";
+import { logoutBloodBank,loginBloodBank,registerBloodBank, refreshAccessTokenBB, changeCurrentPasswordBB, 
+    getCurrentUserBB } from "../controllers/";
 import {upload} from '../middlewares/multer.middleware.js';
 import { verifyJWT } from '../middlewares/auth.middleware.js';
 const router = Router()
 
 router.route("/donorRegistration").post(registerUser)
 
-router.route("/login").post(loginUser)
+router.route("/loginUser").post(loginUser)
+router.route("/bloodBankRegistration").post(registerBloodBank)
+router.route("/loginBloodBank").post(loginBloodBank)
 
 //secure route
 router.route("/logout").post(verifyJWT, logoutUser)
