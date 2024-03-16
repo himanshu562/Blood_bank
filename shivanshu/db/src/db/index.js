@@ -1,16 +1,30 @@
 import mongoose from 'mongoose';
-import {DB_NAME} from '../constants.js';
 
-const connectDB = async () => {
+const connectUserDB = async () => {
     try {
-        const connectionInstance = await mongoose.connect
-        (`${process.env.MONGODB_URI}/${DB_NAME}`)
-        console.log(`\n DATABASE CONNECTED !! DB HOST: ${connectionInstance.connection.host}`);
-
+        await mongoose.connect(`${process.env.MONGODB_URI}/user-data`);
+        console.log("Connected to User Database");
     } catch (error) {
-        console.log("MONGODB CONNECTION ERROR:", error);
-        process.exit(1)
+        console.error("Error connecting to User Database:", error);
     }
-}
+};
 
-export default connectDB  
+const connectBloodBankDB = async () => {
+    try {
+        await mongoose.connect(`${process.env.MONGODB_URI}/blood-bank-data`);
+        console.log("Connected to Blood Bank Database");
+    } catch (error) {
+        console.error("Error connecting to Blood Bank Database:", error);
+    }
+};
+
+const connectHospitalDB = async () => { // Example for a third database
+    try {
+        await mongoose.connect(`${process.env.MONGODB_URI}/admin-data`);
+        console.log("Connected to Admin Database");
+    } catch (error) {
+        console.error("Error connecting to Admin Database:", error);
+    }
+};
+
+export { connectUserDB, connectBloodBankDB, connectHospitalDB };
