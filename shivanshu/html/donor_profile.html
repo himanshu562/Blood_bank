@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Profile</title>
+    <link rel="stylesheet" href="../css/donor_profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-##########" crossorigin="anonymous" />
+
+</head>
+<body>
+    <div class="container">
+        <h1>Donor Profile</h1>
+        <div class="profile">
+            <p><strong>Name:</strong> <?php echo $donorData['name']; ?></p>
+            <p><strong>Age:</strong> <?php echo $donorData['age']; ?></p>
+            <p><strong>Gender:</strong> <?php echo $donorData['gender']; ?></p>
+            <p><strong>Blood Group:</strong> <?php echo $donorData['blood_group']; ?></p>
+            <p><strong>Address:</strong> <?php echo $donorData['address']; ?></p>
+            <p><strong>City:</strong> <?php echo $donorData['city']; ?></p>
+            <p><strong>Email:</strong> <?php echo $donorData['email']; ?></p>
+            <!-- Add more donor data fields as needed -->
+        </div>
+        <form action="logout.php" method="post">
+            <button type="submit">Logout</button>
+        </form>
+        <a href="home.html" class="home-button"><i class="fas fa-home"></i> i think this "home button" is irrelevant here as this is the only page donor has{currently}</a>
+
+    </div>
+</body>
+</html>

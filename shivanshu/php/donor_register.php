@@ -2,7 +2,11 @@
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
+    // $servername = "Mysql@localhost:3306";
+    // $servername = "Local instance MySQL80";
     $servername = "localhost";
+
+
     $username = "root";
     $password = "root";
     $dbname = "blood_bank";

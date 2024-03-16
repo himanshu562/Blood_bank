@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donor Detail</title>
+    <link rel="stylesheet" type="text/css" href="../css/hospital_request.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Requirement</h1>
+        <form id="donor-detail-form">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" placeholder="1, 2, 3...." required><br><br>
+            <label for="blood-group">Blood Group:</label> 
+            <select id="blood-group" name="blood_group" required>
+                <option value="">Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option> 
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option> 
+                <option value="O+">O+</option> 
+                <option value="O-">O-</option>
+            </select><br><br>
+            <label for="transfusion">Okay with transfusion:</label>
+            <input type="checkbox" id="transfusion" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
