@@ -1,0 +1,75 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    padding: 10px;
+    color: #4CAF50; /* Accent color */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+h1 {
+    color: #4CAF50; /* Accent color */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50; /* Accent color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker shade */
+}
+
+p {
+    margin-top: 20px;
+}
+
+a {
+    color: #4CAF50; /* Accent color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
