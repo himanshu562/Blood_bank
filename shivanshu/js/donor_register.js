@@ -1,40 +1,43 @@
-// registration.js
+const express = require('express');
+const { MongoClient } = require('mongodb');
+const app = express();
+const PORT = process.env.PORT || 5500;
 
-// Function to collect form data and format as CSV
-function formatDataAsCSV() {
-    var name = document.getElementById('name').value;
-    var age = document.getElementById('age').value;
-    var gender = document.getElementById('gender').value;
-    var bloodGroup = document.getElementById('blood_group').value;
-    
-    var address = document.getElementById('address').value;
-    var city = document.getElementById('city').value;    
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+// MongoDB Connection URI
+const uri = 'mongodb://localhost:27017';
+const client = new MongoClient(uri);
 
-    // Add other form fields as needed
+// Middleware to parse JSON bodies
+app.use(express.json());
 
-    // Format data as CSV string
-    var csvData = name + ',' + age + ',' + gender + ',' + bloodGroup + '\n';
-    // Add other form fields as needed
+// Serve static files (HTML, CSS, etc.)
+app.use(express.static('public'));
 
-    return csvData;
-}
+// Handle form submission
+app.post('/donor_register', async (req, res) => {
+    try {
+        // Connect to MongoDB
+        await client.connect();
 
-// Function to create or append data to CSV file
-function writeToCSV() {
-    var csvData = formatDataAsCSV();
+        // Access the database and collection
+        const database = client.db('blood_bank_db');
+        const collection = database.collection('donors');
 
-    // Create or append data to CSV file
-    var file = new Blob([csvData], {type: 'text/csv'});
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(file);
-    a.download = 'donor_data.csv';
-    a.click();
-}
+        // Extract data from request body
+        const { name, age, gender, blood_group, address, city, email, password } = req.body;
 
-// Function to submit form and write to CSV
-function submitForm() {
-    writeToCSV();
-    // Add any additional submission logic here if needed
-}
+        // Insert donor data into the collection
+        const result = await collection.insertOne({ name, age, gender, blood_group, address, city, email, password });
+
+        // Respond with success message
+        res.status(201).json({ message: 'Donor registered successfully' });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
