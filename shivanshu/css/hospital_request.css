@@ -57,3 +57,16 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+.background-image {
+    background-image: url('/img/bloody5.jpg');
+    background-color:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    position: fixed;
+    margin-top: 0;
+    margin-left: 0;
+    width: 108%;
+    height: 104%;
+    z-index: -1;
+  }
