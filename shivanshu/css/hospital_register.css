@@ -68,11 +68,11 @@ a:hover {
     text-decoration: underline;
 }
 .background-image {
-    background-image: url('/img/bloody3.jpg');
+    background-image: url('/img/bloody6.gif');
     background-color:cover;
     background-position:center center;
     background-repeat: no-repeat;
-    background-size: 10%;
+    background-size: 100%;
     position: fixed;
     margin-top: 0;
     margin-left: 0;
