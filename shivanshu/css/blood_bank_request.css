@@ -34,7 +34,7 @@ body {
 }
 
 h1 {
-    color: #4CAF50; /* Accent color */
+    color:rgb(255, 0, 0); /* Accent color */
 }
 
 input[type="email"],
@@ -48,7 +48,7 @@ input[type="password"] {
 }
 
 button {
-    background-color: #4CAF50; /* Accent color */
+    background-color:rgb(255, 0, 0); /* Accent color */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -58,7 +58,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Darker shade */
+    background-color:rgb(255, 0, 0); /* Darker shade */
 }
 
 p {
@@ -66,10 +66,23 @@ p {
 }
 
 a {
-    color: #4CAF50; /* Accent color */
+    color:rgb(255, 0, 0); /* Accent color */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
 }
+.background-image {
+    background-image: url('/img/bloody3.jpg');
+    background-color:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    position: fixed;
+    margin-top: 0;
+    margin-left: 0;
+    width: 108%;
+    height: 104%;
+    z-index: -1;
+  }
