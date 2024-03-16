@@ -51,11 +51,11 @@ input[type="submit"]:hover {
     background-color: darkred;
 }
 .background-image {
-    background-image: url('/img/bloody4.jpg');
+    background-image: url('/img/bloody6.gif');
     background-color:cover;
     background-position:center center;
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: 100%;
     position: fixed;
     margin-top: 0;
     margin-left: 0;
