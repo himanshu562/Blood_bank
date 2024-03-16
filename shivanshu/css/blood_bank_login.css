@@ -4,9 +4,10 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     height: 100vh;
+    
 }
 
 .container {
@@ -68,11 +69,11 @@ a:hover {
     text-decoration: underline;
 }
 .background-image {
-    background-image: url('/img/bloody2.jpg');
+    background-image: url('/img/bloody9.gif');
     background-color:cover;
     background-position:center center;
     background-repeat: no-repeat;
-    background-size: 122%;
+    background-size: 100%;
     position: fixed;
     margin-top: 0;
     margin-left: 0;

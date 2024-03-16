@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-    color: #45a049;
+    color: rgb(255,0,0);
 }
 
 p {
@@ -55,7 +55,7 @@ p {
 }
 
 .container form button {
-    background-color: #45a049;
+    background-color: rgb(255,0,0);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -65,7 +65,7 @@ p {
 }
 
 .container form button:hover {
-    background-color: #4CAF50;
+    background-color: rgb(255,0,0);
 }
 .background-image {
     background-image: url('/img/bloody5.jpg');

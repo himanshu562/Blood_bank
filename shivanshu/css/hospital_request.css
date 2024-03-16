@@ -5,6 +5,9 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
+    align-items:flex-start;
+    display: flex;
 }
 
 .container {
@@ -62,7 +65,7 @@ input[type="submit"]:hover {
     background-color:cover;
     background-position:center center;
     background-repeat: no-repeat;
-    background-size: 140%;
+    background-size: 120%;
     position: fixed;
     margin-top: 0;
     margin-left: 0;
