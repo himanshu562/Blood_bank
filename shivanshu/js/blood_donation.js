@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Update the "Unit present" data for all blood groups
         updateUnitPresentData();
+        alert('Blood donation added. Blood amount updated.');
     });
 
     // Function to update the "Unit present" data for all blood groups
