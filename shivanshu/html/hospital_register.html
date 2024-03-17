@@ -4,6 +4,8 @@
     <title>Hospital Registration</title>
     <link rel="stylesheet" type="text/css" href="../css/hospital_register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-##########" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+
 </head>
 <body>
     <div class="background-image"></div>
@@ -35,5 +37,20 @@
         <p>Already have an account? <a href="hospital_login.html">Login here</a></p>
         <a href="home.html" class="home-button"><i class="fas fa-home"></i> </a>
     </div>
+    <script>
+    const socket = io('http://localhost:3002/api/v1/users/hospitalRegistration'); 
+    socket.on('connect', () => {
+      console.log('Connected to server');
+    });
+
+    socket.on('alert', (data) => {
+      const alertMessage = document.getElementById('alert-message');
+      alertMessage.textContent = data.message;
+
+      // Perform additional actions based on the received message
+      console.log('Action triggered by alert:', data.message);
+      // You can make further API calls, update the UI, or perform other actions here
+    });
+    </script>
 </body>
 </html>
