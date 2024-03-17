@@ -4,7 +4,6 @@
     <title>Blood Groups with Units Present</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
     <link rel="stylesheet" type="text/css" href="../css/blood_bank_home.css">
-
 </head>
 <body>
     <div id="main-form-heading" class="card-panel">
@@ -13,9 +12,9 @@
     
     <div class="container">
         <div class="btn-container">
-            <button class="btn waves-effect waves-light" type="submit" name="action" href="blood_donation.html">Blood Refill</button>
-            <button class="btn waves-effect waves-light" type="submit" name="action" href="/html/donation_request.html">Requests</button>
-            <button class="btn waves-effect waves-light" type="submit" name="action" href="/html/potential_donor.html">Potential Donors</button>
+            <button class="btn waves-effect waves-light" type="submit" name="action"><a href="blood_donation.html">Blood Refill</a></button>
+            <button class="btn waves-effect waves-light" type="submit" name="action" ><a href="blood_bank_request.html">Requests</a></button>
+            <button class="btn waves-effect waves-light" type="submit" name="action" ><a href="blood_potential_donors.html">Potential Donors</a></button>
         </div>
         <div class="row">
             <table class="striped">
@@ -28,40 +27,42 @@
                 <tbody>
                     <tr>
                         <td>A+</td>
-                        <td>10</td>
+                        <td id="A+_units"></td>
                     </tr>
                     <tr>
                         <td>A-</td>
-                        <td>8</td>
+                        <td id="A-_units"></td>
                     </tr>
                     <tr>
                         <td>B+</td>
-                        <td>12</td>
+                        <td id="B+_units"></td>
                     </tr>
                     <tr>
                         <td>O-</td>
-                        <td>8</td>
+                        <td id="O-_units"></td>
                     </tr>
                     <tr>
                         <td>O+</td>
-                        <td>3</td>
+                        <td id="O+_units"></td>
                     </tr>
                     <tr>
                         <td>AB-</td>
-                        <td>2</td>
+                        <td id="AB-_units"></td>
                     </tr>
                     <tr>
                         <td>AB+</td>
-                        <td>4</td>
+                        <td id="AB+_units"></td>
                     </tr>
                     <tr>
                         <td>B-</td>
-                        <td>6</td>
+                        <td id="B-_units"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
     </div>
+    <!-- Include the script tag at the end of the body -->
+    <script src="../js/blood_bank_home.js"></script>
 </body>
 </html>

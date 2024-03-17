@@ -17,7 +17,9 @@
             border-radius: 10px; /* Add border radius */
             padding: 10px; /* Add padding */
         }
-
+        a{
+            color: white;
+        }
         .container {
             margin: 0 auto;
             width: 80%;

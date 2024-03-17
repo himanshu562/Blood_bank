@@ -3,26 +3,26 @@
 <head>
     <title>Donation Detail</title>
     <link rel="stylesheet" href="../css/donation_details.css">
-
+    <script src="../js/blood_donation.js" defer></script>
 </head>
 <body>
     <div class="background-image"></div>
     <h1>Donation Detail</h1>
     <form id="donation-form">
         <label for="full-name">Full Name:</label>
-        <input type="text" id="full-name" placeholder="Name" required><br>
+        <input type="text" id="full-name" placeholder="Name"  ><br>
         
         <label for="contact">Contact:</label>
-        <input type="text" id="contact" placeholder="PhoneNo" required><br>
+        <input type="text" id="contact" placeholder="PhoneNo"  ><br>
         
         <label for="donation-date">Donation Date:</label>
-        <input type="text" id="donation-date" placeholder="dd/mm/yy" required><br>
+        <input type="text" id="donation-date" placeholder="dd/mm/yy"  ><br>
         
         <label for="donation-time">Donation Time:</label>
-        <input type="text" id="donation-time" placeholder="00:00" required><br>
+        <input type="text" id="donation-time" placeholder="00:00"  ><br>
         
         <label for="blood-group">Blood Group:</label>
-        <select id="blood-group" name="blood_group" required>
+        <select id="blood-group" name="blood_group"  >
             <option value="">Select</option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
@@ -35,20 +35,20 @@
         </select><br>
         
         <label for="amount">Amount (in ml):</label>
-        <input type="text" id="amount" name="amount" required><br>
+        <input type="text" id="amount" name="amount"  ><br>
         
         <label for="address">Address:</label>
-        <input type="text" id="address" placeholder="Village/City/State" required><br>
+        <input type="text" id="address" placeholder="Village/City/State"  ><br>
         
         <label for="status">Donation Status:</label>
-        <select id="status" name="status" required>
+        <select id="status" name="status"  >
             <option value="">Select</option>
             <option value="+ve">Successful</option>
             <option value="-ve">Rejected</option>
         </select><br>
         
         <label for="donor-id">Donor Id:</label>
-        <input type="text" id="donor-id" name="donor_id" required><br>
+        <input type="text" id="donor-id" name="donor_id"  ><br>
         
         <h4>Upload Consent Form:</h4>
         <input type="file" id="consent-form" accept="application/pdf">
@@ -62,5 +62,6 @@
         
         <input type="submit" value="Submit">
     </form>
+    <div id="unit-present"></div> <!-- This is where the "Unit present" data will be displayed -->
 </body>
 </html>
