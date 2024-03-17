@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request List</title>
+    <link rel="stylesheet" type="text/css" href="../css/request_list.css">
+</head>
+<body>
+    <h1>Request List</h1>
+    <div class="container">
+        <table id="request-table">
+            <thead>
+                <tr>
+                    <th>Blood Group</th>
+                    <th>Amount</th>
+                    <th>Okay with Transfusion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Retrieve the saved requests data from localStorage
+            const requests = JSON.parse(localStorage.getItem('requests')) || [];
+
+            // Get the table body element
+            const tbody = document.querySelector('#request-table tbody');
+
+            // Loop through the requests and create table rows
+            requests.forEach(function(request) {
+                const row = document.createElement('tr');
+
+                // Create and append table cells for each request property
+                const bloodGroupCell = document.createElement('td');
+                bloodGroupCell.textContent = request.bloodGroup;
+                row.appendChild(bloodGroupCell);
+
+                const amountCell = document.createElement('td');
+                amountCell.textContent = request.amount + ' units';
+                row.appendChild(amountCell);
+
+                const transfusionCell = document.createElement('td');
+                transfusionCell.textContent = request.okayWithTransfusion ? 'Yes' : 'No';
+                row.appendChild(transfusionCell);
+
+                // Append the row to the table body
+                tbody.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>
