@@ -5,7 +5,6 @@ import { uploadOnCloudinary } from '../utils/cloudinary.js';
 import { ApiResponse } from '../utils/ApiResponse.js';
 import jwt from "jsonwebtoken"
 
-
 const generateAccessAndRefreshToken = async (userId) =>{
     try {
         const user = await Hospital.findById(userId)
@@ -42,13 +41,13 @@ const registerHospital = asyncHandler(async (req, res) => {
     try {
     
 
-    const { bank_name, address, contact, email, password } = req.body
+    const { hospital_name, email, address, contact, password } = req.body
     console.log("email", email);
 
     // check validation, not empty
 
     if(
-        [bank_name, email, password].some((field) =>
+        [hospital_name, email, password].some((field) =>
         field?.trim()==="")
     ) {
         throw new ApiError(400, "All fields are required")
@@ -66,10 +65,10 @@ const registerHospital = asyncHandler(async (req, res) => {
 
     
     const user = await Hospital?.create({
-        bank_name, 
+        hospital_name, 
+        email, 
         address, 
         contact, 
-        email, 
         password
 
     })
