@@ -73,3 +73,10 @@ input[type="submit"]:hover {
     height: 104%;
     z-index: -1;
   }
+  .home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px; /* Adjusted font size */
+    padding: 10px;
+}
