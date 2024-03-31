@@ -11,6 +11,7 @@ body {
 }
 
 .container {
+    position: relative;
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -18,7 +19,7 @@ body {
     width: 300px;
     text-align: flex-end;
     float:right;
-
+    margin: 20px 20px 0 0;
 }
 
 .home-button {

@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-    color: #4CAF50; /* Accent color */
+    color: red; /* Accent color */
 }
 
 select {
@@ -54,7 +54,7 @@ input[type="password"] {
 }
 
 button {
-    background-color: #4CAF50; /* Accent color */
+    background-color: red; /* Accent color */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -64,7 +64,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Darker shade */
+    background-color: red; /* Darker shade */
 }
 
 p {
@@ -72,7 +72,7 @@ p {
 }
 
 a {
-    color: #4CAF50; /* Accent color */
+    color: red; /* Accent color */
     text-decoration: none;
 }
 
